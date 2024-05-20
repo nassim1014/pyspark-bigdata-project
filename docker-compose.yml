@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pyspark-app:
+    build: .
+    container_name: pyspark-container
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    command: ["python", "./src/scripts/main.py"]
